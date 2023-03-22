@@ -10,34 +10,42 @@ const ingredients = [
 const ingredientsEl = document.querySelector(`ul#ingredients`);
 // console.log(ingredientsEl);
 
-const firstEngredient = document.createElement("li");
-firstEngredient.textContent = ingredients[0];
-firstEngredient.classList.add("item");
-// console.log(firstEngredient);
+const items = ingredients.map(ingredient => {
+  const elementIng = document.createElement("li");
+  elementIng.classList.add("item");
+  elementIng.textContent = ingredient;
+return elementIng;
+});
+ingredientsEl.append(...items);
 
-const secondEngredient = document.createElement("li");
-secondEngredient.textContent = ingredients[1];
-secondEngredient.classList.add("item");
-// console.log(secondEngredient);
+// const firstEngredient = document.createElement("li");
+// firstEngredient.textContent = ingredients[0];
+// firstEngredient.classList.add("item");
+// // console.log(firstEngredient);
 
-const thirdEngredient = document.createElement("li");
-thirdEngredient.textContent = ingredients[2];
-thirdEngredient.classList.add("item");
-// console.log(thirdEngredient);
+// const secondEngredient = document.createElement("li");
+// secondEngredient.textContent = ingredients[1];
+// secondEngredient.classList.add("item");
+// // console.log(secondEngredient);
 
-const forthEngredient = document.createElement("li");
-forthEngredient.textContent = ingredients[3];
-forthEngredient.classList.add("item");
-// console.log(forthEngredient);
+// const thirdEngredient = document.createElement("li");
+// thirdEngredient.textContent = ingredients[2];
+// thirdEngredient.classList.add("item");
+// // console.log(thirdEngredient);
 
-const fifthEngredient = document.createElement("li");
-fifthEngredient.textContent = ingredients[4];
-fifthEngredient.classList.add("item");
-// console.log(fifthEngredient);
+// const forthEngredient = document.createElement("li");
+// forthEngredient.textContent = ingredients[3];
+// forthEngredient.classList.add("item");
+// // console.log(forthEngredient);
 
-const lastEngredient = document.createElement("li");
-lastEngredient.textContent = ingredients[5];
-lastEngredient.classList.add("item");
-// console.log(lastEngredient);
+// const fifthEngredient = document.createElement("li");
+// fifthEngredient.textContent = ingredients[4];
+// fifthEngredient.classList.add("item");
+// // console.log(fifthEngredient);
 
-ingredientsEl.append(firstEngredient, secondEngredient, thirdEngredient, forthEngredient, fifthEngredient, lastEngredient);
+// const lastEngredient = document.createElement("li");
+// lastEngredient.textContent = ingredients[5];
+// lastEngredient.classList.add("item");
+// // console.log(lastEngredient);
+
+// ingredientsEl.append(firstEngredient, secondEngredient, thirdEngredient, forthEngredient, fifthEngredient, lastEngredient);
